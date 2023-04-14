@@ -43,10 +43,10 @@ public class AuthenticationManager : MonoBehaviour
                 {
                     Email = userName,
                     Password = password,
-                    TitleId = PlayFabSettings.TitleId
+                    TitleId = PlayFabSettings.TitleId,
+                    InfoRequestParameters = _infoRequestParams
                 },(loginResult) => {
                     Debug.Log("Successfully Logged in");
-                    print(PlayFabSettings.TitleId);
                     if (loginResult.InfoResultPayload != null)
                     {
                         InitializeConfigValues(loginResult.InfoResultPayload);

@@ -13,10 +13,12 @@ public class RoomInfoContainer : MonoBehaviour
 
     private RoomInfo info;
 
+    public Button ConnectBtn { get => _connectBtn; set => _connectBtn = value; }
+
     public void UpdateRoomInfo(RoomInfo info)
     {
         _roomStats.text = $"{info.Name} | {info.PlayerCount}/{info.MaxPlayers}";
-        _connectBtn.onClick.RemoveAllListeners();
-        _connectBtn.onClick.AddListener(() => { PhotonNetwork.JoinRoom(info.Name); });
+        ConnectBtn.onClick.RemoveAllListeners();
+        ConnectBtn.onClick.AddListener(() => { PhotonNetwork.JoinRoom(info.Name); });
     }
 }

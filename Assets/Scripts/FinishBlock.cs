@@ -7,7 +7,9 @@ public class FinishBlock : MonoBehaviourPunCallbacks
 {
     private bool finished = false;
     private int winnerId;
-    private GameObject endScreen;
+    private GameObject _endScreen;
+
+    [SerializeField] PlayerInfo _playerInfo;
 
     void Awake() {
         //endScreen = Resources.Load("Endscreen");
@@ -20,24 +22,22 @@ public class FinishBlock : MonoBehaviourPunCallbacks
             finished = true;
             if(PhotonNetwork.LocalPlayer.ActorNumber == winnerId) {
                 ShowWinScreen();
+                _playerInfo.AddCurrency(PlayerInfo.VirtualCurrency.CO, 5);
             } else {
                 ShowLoseScreen();
+                _playerInfo.SubtractCurrency(PlayerInfo.VirtualCurrency.HP, 1);
             }
-            
-            // if(PhotonNetwork.IsMasterClient) {
-            //     photonView.RPC("ShowLoseScreen", RpcTarget.Others);
-            // }
         }
     }
 
     private void ShowWinScreen() {
-        endScreen = Instantiate(Resources.Load("Endscreen", typeof(GameObject))) as GameObject;
-        endScreen.GetComponent<EndScreen>().Initialize(null);
+        _endScreen = Instantiate(Resources.Load("Endscreen", typeof(GameObject))) as GameObject;
+        _endScreen.GetComponent<EndScreen>().Initialize(null);
     }
 
     [PunRPC] 
     void ShowLoseScreen() {
-        endScreen = Instantiate(Resources.Load("Endscreen", typeof(GameObject))) as GameObject;
-        endScreen.GetComponent<EndScreen>().Initialize(PhotonNetwork.CurrentRoom.GetPlayer(winnerId).NickName);
+        _endScreen = Instantiate(Resources.Load("Endscreen", typeof(GameObject))) as GameObject;
+        _endScreen.GetComponent<EndScreen>().Initialize(PhotonNetwork.CurrentRoom.GetPlayer(winnerId).NickName);
     }
 }

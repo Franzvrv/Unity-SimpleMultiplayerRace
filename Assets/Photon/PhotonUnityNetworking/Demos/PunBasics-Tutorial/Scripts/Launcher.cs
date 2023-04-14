@@ -54,6 +54,7 @@ namespace Photon.Pun.Demo.PunBasics
 		[SerializeField] private CreateRoomPanel _createRoomPanel;
 		[SerializeField] private InRoomPanel _inRoomPanel;
 		[SerializeField] private GameObject _playerLobbyInstance;
+		[SerializeField] private GameObject _PlayerDetails;
 		private GameObject playerLobbyInstance;
 
 		#endregion
@@ -95,6 +96,7 @@ namespace Photon.Pun.Demo.PunBasics
 			_lobbyContainerParent.gameObject.SetActive(false);	
 			_createRoomPanel.gameObject.SetActive(false);
 			_inRoomPanel.gameObject.SetActive(false);
+			_PlayerDetails.SetActive(false);
 			
 			_roomContainerList = new List<RoomInfoContainer>();
 			for (var i = 0; i < 20; i++)
@@ -195,6 +197,7 @@ namespace Photon.Pun.Demo.PunBasics
 			
 			_lobbyContainerParent.gameObject.SetActive(true);
 			_createRoomPanel.gameObject.SetActive(true);
+			_PlayerDetails.SetActive(true);
 
 			PhotonNetwork.JoinLobby();
 		}
@@ -236,6 +239,9 @@ namespace Photon.Pun.Demo.PunBasics
 		        
 		        _roomContainerList[i].gameObject.SetActive(true);
 		        _roomContainerList[i].UpdateRoomInfo(roomList[i]);
+				if (PlayerDetails.instance.HealthText.text == "0") {
+					_roomContainerList[i].ConnectBtn.gameObject.SetActive(false);
+				}
 	        }
         }
 

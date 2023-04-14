@@ -54,9 +54,7 @@ public class CurrencyManager : MonoBehaviour
                 _hpAmount = result.Balance;
                 Debug.Log($"HP:{_hpAmount}");
                 break;
-        }
-
-            
+        }   
     }
 
     private void OnFailedModifyCurrency(PlayFabError error)

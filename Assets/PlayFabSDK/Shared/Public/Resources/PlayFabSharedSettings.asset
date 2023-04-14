@@ -15,7 +15,7 @@ MonoBehaviour:
   TitleId: 177A7
   DeveloperSecretKey: MT6SQPYERATXAAFW7K7664YBNBEK5PO8A81EBP7GOT7GTN93QQ
   ProductionEnvironmentUrl: 
-  RequestType: 2
+  RequestType: 0
   DisableDeviceInfo: 0
   DisableFocusTimeCollection: 0
   RequestTimeout: 2000

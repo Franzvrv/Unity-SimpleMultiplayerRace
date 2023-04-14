@@ -1264,6 +1264,8 @@ GameObject:
   - component: {fileID: 730792743}
   - component: {fileID: 730792742}
   - component: {fileID: 730792746}
+  - component: {fileID: 730792748}
+  - component: {fileID: 730792747}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1368,6 +1370,65 @@ MonoBehaviour:
   _login: {fileID: 413768564}
   _popup: {fileID: 7686822779450178083, guid: 28f4e2dfa4716064b808d86d8f926375, type: 3}
   _registration: {fileID: 1438912054}
+  _experienceManager: {fileID: 730792748}
+  _currencyManager: {fileID: 730792747}
+  _infoRequestParams:
+    GetCharacterInventories: 0
+    GetCharacterList: 0
+    GetPlayerProfile: 0
+    GetPlayerStatistics: 0
+    GetTitleData: 1
+    GetUserAccountInfo: 0
+    GetUserData: 0
+    GetUserInventory: 0
+    GetUserReadOnlyData: 0
+    GetUserVirtualCurrency: 1
+    PlayerStatisticNames: []
+    ProfileConstraints:
+      ShowAvatarUrl: 0
+      ShowBannedUntil: 0
+      ShowCampaignAttributions: 0
+      ShowContactEmailAddresses: 0
+      ShowCreated: 0
+      ShowDisplayName: 0
+      ShowExperimentVariants: 0
+      ShowLastLogin: 0
+      ShowLinkedAccounts: 0
+      ShowLocations: 0
+      ShowMemberships: 0
+      ShowOrigination: 0
+      ShowPushNotificationRegistrations: 0
+      ShowStatistics: 0
+      ShowTags: 0
+      ShowTotalValueToDateInUsd: 0
+      ShowValuesToDate: 0
+    TitleDataKeys: []
+    UserDataKeys: []
+    UserReadOnlyDataKeys: []
+--- !u!114 &730792747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730792741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e4ae072ee6c50a44822c80dd0e0c203, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &730792748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730792741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b23c22725d5dc43af203c56f8a41ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &762296332
 GameObject:
   m_ObjectHideFlags: 0

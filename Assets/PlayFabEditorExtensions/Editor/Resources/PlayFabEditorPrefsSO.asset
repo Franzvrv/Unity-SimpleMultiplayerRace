@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: PlayFabEditorPrefsSO
   m_EditorClassIdentifier: 
   DevAccountEmail: franz.virgino@ciit.edu.ph
-  DevAccountToken: yxkgupok4wsd579q1aqj87ikst6545yfzx4cmzi3wmt49eppwmrwqsggcnth43b1p5d5qgu6odtrkhraxhkr9uehau7dt4y98imyuk87w4eabcxjui746b9bmw387591gsm4kkh1zduhgga8dod9kwywjsph1bqisioztzdjtcku3zoia4kzyy9kaw9s46yajcyhbgfj
+  DevAccountToken: fyrjqnryio35y5co5j53hcrwhf1jf75t13g5zu68k4i5xmo1q9fpktkxmenjwq58cgoaz8qeg5u9uqeok7fyk1fup856otqojjnirgpfugj76ozm7o15jist48agzypawkxqhryty5ta584dtkwfkbw6eixehdgienjw734k7jrac99gkk8w583wngqbudxe7n1zypmu
   AadAuthorization: 
-  SelectedStudio: My Game Studio
+  SelectedStudio: 
   SdkPath: Assets/PlayFabSDK
   EdExPath: 
   LocalCloudScriptPath: 
   PanelIsShown: 0
-  curMainMenuIdx: 0
+  curMainMenuIdx: 1
   curSubMenuIdx: 0
